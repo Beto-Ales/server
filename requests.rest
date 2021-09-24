@@ -1,6 +1,41 @@
-POST http://localhost:3000/
+POST http://localhost:3000/items
 Content-Type: application/json
 
 {
     
 }
+
+###
+
+GET http://localhost:3000/items
+
+###
+
+GET http://localhost:3000/items/614e1515627f4eb8477afb1e
+
+###
+
+POST http://localhost:3000/items
+Content-Type: application/json
+
+{
+    "name": "banana",
+    "checked": true
+    
+}
+
+###
+
+# PATCH doesn-t work and is replaced by POST
+
+POST http://localhost:3000/items/614e31dc91738273bc74c689
+Content-Type: application/json
+
+{
+    "name": "chocolate cookies"
+}
+
+
+###
+
+DELETE http://localhost:3000/items/614e329ce34026b19f119688
