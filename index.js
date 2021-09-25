@@ -27,12 +27,13 @@ app.listen(PORT);
 
 
 app.get('/items', async (req, res) => {
-    try {
-        const items = await Item.find();
-        res.status(200).json(items);
-    } catch (error) {
-        res.status(404).json({message: error.message});
-    }
+    // try {
+    //     const items = await Item.find();
+    //     res.status(200).json(items);
+    // } catch (error) {
+    //     res.status(404).json({message: error.message});
+    // }
+    res.json('items section');
 });
 
 
