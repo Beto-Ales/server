@@ -12,7 +12,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use('/items', itemRouts);
+// app.use('/items', itemRouts);
 
 connectDB();
 
