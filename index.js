@@ -34,6 +34,12 @@ app.get('/items', async (req, res) => {
     //     res.status(404).json({message: error.message});
     // }
     res.json('items section');
+
+    try {
+        res.json('items section');
+    } catch (error) {
+        res.json({message: error.message});
+    }
 });
 
 
