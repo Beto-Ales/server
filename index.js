@@ -27,19 +27,19 @@ app.listen(PORT);
 
 
 app.get('/items', async (req, res) => {
-    // try {
-    //     const items = await Item.find();
-    //     res.status(200).json(items);
-    // } catch (error) {
-    //     res.status(404).json({message: error.message});
-    // }
-    res.json('items section');
-
     try {
-        res.json('items section');
+        const items = await Item.find();
+        res.status(200).json(items);
     } catch (error) {
-        res.json({message: error.message});
+        res.status(404).json({message: error.message});
     }
+    // res.json('items section');
+
+    // try {
+    //     res.json('items section');
+    // } catch (error) {
+    //     res.json({message: error.message});
+    // }
 });
 
 
