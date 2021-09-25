@@ -30,20 +30,7 @@ app.listen(PORT);
 
 
 
-// it works
-// app.post('/', async (req,res) => {
 
-//     const item = new Item({
-
-//         name: "milk",
-//         checked: false
-//     });
-
-//     const x = await item.save();
-//     res.json(x);
-
-
-// });
 
 
 
