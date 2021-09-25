@@ -48,13 +48,13 @@ app.listen(PORT);
 
 
 
-// app.get('/', async (req, res) => {
+app.get('/', async (req, res) => {
 
 
-//     const item = await Item.find();
-//     res.json(item);
-//     // res.send('dale campeon');
-// });
+    // const item = await Item.find();
+    res.json("Bienvenido!!!");
+    // res.send('dale campeon');
+});
 
 
 
