@@ -1,18 +1,23 @@
-const express = require('express');
-const connectDB = require('./dbConnection/connection.js');
+import express from 'express';
+// const express = require('express'); replaced
+import connectDB from './dbConnection/connection.js';
+// const connectDB = require('./dbConnection/connection.js'); replaced
 
-const Item = require('./models/item.js');
 
-const itemRouts = require('./routes/itemRoutes');
+// import Item from './models/item.js'; this is not needed in this file
+// const Item = require('./models/item.js'); replaced
+
+import itemRoutes from './routes/itemRoutes.js'
+// const itemRouts = require('./routes/itemRoutes'); there was a spelling mistake
 
 
 const PORT = process.env.PORT || 3306;
 
 const app = express();
 
-app.use(express.json());
+app.use('/items', itemRoutes);
 
-// app.use('/items', itemRouts);
+app.use(express.json());
 
 connectDB();
 
@@ -21,52 +26,10 @@ app.listen(PORT);
 
 
 
-
-
-
-
-
-app.get('/items', async (req, res) => {
-    try {
-        const items = await Item.find();
-        res.status(200).json(items);
-    } catch (error) {
-        res.status(404).json({message: error.message});
-    }
-    // res.json('items section');
-
-    // try {
-    //     res.json('items section');
-    // } catch (error) {
-    //     res.json({message: error.message});
-    // }
-});
-
-
-
-
-
-
-
+// first message welcome
 
 app.get('/', async (req, res) => {
-
-
-    // try {
-    //     const items = await Item.find();
-    //     res.status(200).json(items);
-    // } catch (error) {
-    //     res.status(404).json({message: error.message});
-    // }
-
-
-    // const item = await Item.find();
-    res.json("Bienvenido!!!");
-    // res.send('dale campeon');
+    
+    res.json("Welcome");
+    
 });
-
-
-
-
-
-
