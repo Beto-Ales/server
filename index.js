@@ -15,9 +15,9 @@ const PORT = process.env.PORT || 3306;
 
 const app = express();
 
-app.use('/items', itemRoutes);
-
 app.use(express.json());
+
+app.use('/items', itemRoutes);
 
 connectDB();
 

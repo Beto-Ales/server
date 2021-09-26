@@ -7,7 +7,7 @@ import Item from '../models/item.js';
 
 
 
-const getAllItems = async (req,res) => {
+export const getAllItems = async (req,res) => {
 
     try {
         const items = await Item.find();
@@ -18,7 +18,7 @@ const getAllItems = async (req,res) => {
 };
 
 
-const getItem = async (req, res) => {
+export const getItem = async (req, res) => {
 
     const {id: _id} = req.params;
 
@@ -30,7 +30,7 @@ const getItem = async (req, res) => {
     }
 };
 
-const postItem = async (req, res) => {
+export const postItem = async (req, res) => {
 
     const item = req.body;
     const newItem = new Item(item);
@@ -42,7 +42,7 @@ const postItem = async (req, res) => {
     }
 };
 
-const updateItem = async (req, res) => {
+export const updateItem = async (req, res) => {
 
     const {id: _id} = req.params;
     const item = req.body;
@@ -55,7 +55,7 @@ const updateItem = async (req, res) => {
     }
 };
 
-const deleteItem = async (req, res) => {
+export const deleteItem = async (req, res) => {
 
     const {id: _id} = req.params;    
 
@@ -69,5 +69,5 @@ const deleteItem = async (req, res) => {
     }
 };
 
-export {getAllItems, getItem, postItem, updateItem, deleteItem}; //ensure spelling
+// export {getAllItems, getItem, postItem, updateItem, deleteItem}; //ensure spelling
 // module.exports = {getAllItems, getItem, postItem, updateItem, deleteItem}; replaced

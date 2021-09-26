@@ -1,7 +1,8 @@
 import mongoose from 'mongoose';
-// const mongoose = require('mongoose'); replaced
+
 
 const URI = "mongodb+srv://beto:4BTkvc9B3rcRsZOC@cluster0.nf0fd.mongodb.net/Cluster0?retryWrites=true&w=majority";
+            
 
 
 const connectDB = async () => {await mongoose.connect(URI, {
@@ -11,5 +12,6 @@ const connectDB = async () => {await mongoose.connect(URI, {
     console.log('db connected..!');
 };
 
-export {connectDB};
-// module.exports = connectDB;
+
+
+export default connectDB;
