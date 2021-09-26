@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 
-const URI = "mongodb+srv://beto:4BTkvc9B3rcRsZOC@cluster0.nf0fd.mongodb.net/Cluster0?retryWrites=true&w=majority";
+const URI = "mongodb+srv://:@cluster0g6hh3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
             
 
 

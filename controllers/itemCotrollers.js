@@ -1,8 +1,8 @@
 import mongoose from 'mongoose';
-// const mongoose = require('mongoose'); replaced
+
 
 import Item from '../models/item.js';
-// const Item = require('../models/item.js'); replaced
+
 
 
 
@@ -69,5 +69,3 @@ export const deleteItem = async (req, res) => {
     }
 };
 
-// export {getAllItems, getItem, postItem, updateItem, deleteItem}; //ensure spelling
-// module.exports = {getAllItems, getItem, postItem, updateItem, deleteItem}; replaced
