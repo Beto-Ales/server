@@ -1,4 +1,4 @@
-POST http://localhost:3000/items
+POST http://localhost:3306/items
 Content-Type: application/json
 
 {
@@ -7,35 +7,57 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3000/items
+GET http://localhost:3306/items
 
 ###
 
-GET http://localhost:3000/items/614e1515627f4eb8477afb1e
+GET https://shopping-in-cph.herokuapp.com
 
 ###
 
-POST http://localhost:3000/items
+GET http://localhost:3306/items/614e1515627f4eb8477afb1e
+
+###
+
+POST http://localhost:3306/items
 Content-Type: application/json
 
 {
-    "name": "banana",
+    "name": "ananas",
+    "check": true,
+    "artWorkshop": false    
+}
+
+###
+
+POST https://shopping-in-cph.herokuapp.com
+Content-Type: application/json
+
+{
+    "name": "heroku",
     "checked": true
     
 }
+
+
+
 
 ###
 
 # PATCH doesn-t work and is replaced by POST
 
-POST http://localhost:3000/items/614e31dc91738273bc74c689
+POST http://localhost:3306/items/61508e6bd789cb6afd38b3a4
 Content-Type: application/json
 
 {
-    "name": "chocolate cookies"
+    
+    "check": false
+    
 }
+
+
 
 
 ###
 
-DELETE http://localhost:3000/items/614e329ce34026b19f119688
+DELETE http://localhost:3306/items/61508acdf726df5e94f7062c
