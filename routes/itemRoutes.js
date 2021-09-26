@@ -1,6 +1,8 @@
-const express = require('express');
+import express from 'express';
+// const express = require('express'); replaced
 
-const {getAllItems, getItem, postItem, updateItem, deleteItem} = require('../controllers/itemCotrollers.js');
+import {getAllItems, getItem, postItem, updateItem, deleteItem} from '../controllers/itemCotrollers.js';
+// const {getAllItems, getItem, postItem, updateItem, deleteItem} = require('../controllers/itemCotrollers.js'); replaced
 
 const router = express.Router();
 
@@ -10,4 +12,6 @@ router.post('/', postItem);
 router.post('/:id', updateItem);
 router.delete('/:id', deleteItem);
 
-module.exports = router;
+// export {router};
+export default router;
+// module.exports = router; replaced

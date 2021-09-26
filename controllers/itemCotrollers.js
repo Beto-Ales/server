@@ -1,6 +1,8 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+// const mongoose = require('mongoose'); replaced
 
-const Item = require('../models/item.js');
+import Item from '../models/item.js';
+// const Item = require('../models/item.js'); replaced
 
 
 
@@ -67,4 +69,5 @@ const deleteItem = async (req, res) => {
     }
 };
 
-module.exports = {getAllItems, getItem, postItem, updateItem, deleteItem};
+export {getAllItems, getItem, postItem, updateItem, deleteItem}; //ensure spelling
+// module.exports = {getAllItems, getItem, postItem, updateItem, deleteItem}; replaced

@@ -1,11 +1,14 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+// const mongoose = require('mongoose');
 
 const itemSchema = mongoose.Schema({
     name: String,
-    checked: Boolean
+    check: Boolean,
+    artWrokshop: Boolean
 });
 
 const Item = mongoose.model('Item', itemSchema);
 
 
-module.exports = Item;
+export {Item};
+// module.exports = Item; replaced
